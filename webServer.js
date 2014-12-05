@@ -4,18 +4,12 @@ var express = require('express'),
 
 var app = express();
 app.set('views', './views');
-//app.set('partial','./views/partia')
-//app.set('partial', './views/partials');
 
 var tweets = [];
 
 app.listen(8000);
 
 app.engine('html', require('ejs').__express);
-
-// app.get('/', function(req, res) {
-// 	res.send('Welcome to Node Twitter');
-// });
 
 app.post('/send', bodyParser(), function(req, res) {
 	if(req.body && req.body.tweet) 
@@ -29,23 +23,23 @@ app.post('/send', bodyParser(), function(req, res) {
 		} 
 		else 
 		{
-			res.send({status:"ok", message:"Tweet received"});
+			var message = {status:"ok", message:"Tweet received"} 
+			res.send(message);
+			console.log(message);
 		}
 	} 
 	else 
 	{
 		//no tweet?
-		res.send({status:"nok", message:"No tweet receieved"});
+		var message = {status:"nok", message:"No tweet receieved"} 
+			res.send(message);
+			console.log(message);
 	}
 });
 
 app.get('/tweets', function(req, res) {
 	res.send(tweets);
 });
-
-// app.get('/', function (req, res) {
-//   res.render('layout.html', { title: 'Hey', message: 'Hello there!'});
-// })
 
 app.get('/', function(req, res) {
 	var title = 'Chirpie',
