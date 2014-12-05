@@ -22,7 +22,8 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .pure-form input[type=text]{
-	padding: .5em 3.6em !important;
+	/*padding: .5em 3.6em !important;*/
+	width: 400px;
 }
 
 textarea#textbox{

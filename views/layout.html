@@ -44,12 +44,16 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .pure-form input[type=text]{
-	padding: .5em 3.6em !important;
+	/*padding: .5em 3.6em !important;*/
+    width: 400px;
+    height: 50px;
+    padding: .5em;
 }
 
 textarea#textbox{
 	height: 200px;
 	width: 400px;
+    padding: .5em;
 }
 
 .pure-button{
@@ -70,8 +74,7 @@ label{
                 <label for="image">Image</label>
                 <input id="image" type="text" placeholder="Please enter an image URL..." name="imageURL">
                 <label for="textbox">Text</label>
-                <textarea id="textbox" placeholder="Please enter your text..." name="informationText">
-                </textarea>
+                <textarea id="textbox" placeholder="Please enter your text..." name="informationText"></textarea>
                 <button type="submit" class="pure-button pure-button-primary">Submit</button>
             </fieldset>
         </form>
