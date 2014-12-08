@@ -31,16 +31,16 @@ app.post('/send', bodyParser(), function(req, res) {
 			});
 		});
 
-		// if(acceptsHtml(req.headers['accept'])) 
-		// {
-		// 	res.redirect('/', 302)
-		// } 
-		// else 
-		// {
-		// 	var message = {status:"ok", message:"Tweet received"} 
-		// 	res.send(message);
-		// 	console.log(message);
-		// }
+		if(acceptsHtml(req.headers['accept'])) 
+		{
+			res.redirect('/', 302)
+		} 
+		else 
+		{
+			var message = {status:"ok", message:"Input Recieved"} 
+			res.send(message);
+			console.log(message);
+		}
 	} 
 	else 
 	{
