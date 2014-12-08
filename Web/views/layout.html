@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>CAN</title>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" type="text/css" href="public/main.css"> -->
+    <style type="text/css">body{
+	width: 100%;
+	height: 100%;
+	background-color: aliceblue;
+	font-family: "Arial";
+	font-size: 20px;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+    outline: none;
+}
+#wrapper{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.pure-form input[type=text]{
+	/*padding: .5em 3.6em !important;*/
+    width: 400px;
+    height: 50px;
+    padding: .5em;
+}
+textarea#textbox{
+	height: 200px;
+	width: 400px;
+    padding: .5em;
+}
+.pure-button{
+	margin-top:25px;
+}
+label{
+	margin-top: 10px;
+}
+</style>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form class="pure-form pure-form-stacked" action="/webapps/send" method="POST">
+            <fieldset>
+                <label for="image">Image</label>
+                <input id="image" type="text" placeholder="Please enter an image URL..." name="imageURL">
+                <label for="textbox">Text</label>
+                <textarea id="textbox" placeholder="Please enter your text..." name="informationText"></textarea>
+<<<<<<< HEAD
+                <input id="date" type="hidden" name="postDate">
+                <script type="text/javascript">
+                document.getElementById('date').value = Date();
+                </script>
+                </input>
+=======
+>>>>>>> FETCH_HEAD
+                <button type="submit" class="pure-button pure-button-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
